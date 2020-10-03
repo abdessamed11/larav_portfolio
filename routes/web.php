@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ProfittController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +22,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Route::resource('/profitt', ProfittController::class);
+//Route::get('profitt', [ProfittController::class,'index']);
+//Route::get('profitt/create', [ProfittController::class,'create']);
+
+Route::resource('/skills', SkillsController::class);
+Route::resource('/profil', ProfilController::class);
