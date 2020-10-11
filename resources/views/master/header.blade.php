@@ -46,7 +46,7 @@
 
       <div class="profile">
         <img src="{{asset('assets/img/profile-img.jpg')}}" alt="" class="img-fluid rounded-circle">
-        @foreach($profits as $profit)
+        @foreach($profils as $profit)
         <h1 class="text-light"><a href="index.html">{{$profit->nom}}</a></h1>
         @endforeach
         <div class="social-links mt-3 text-center">

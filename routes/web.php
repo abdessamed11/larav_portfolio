@@ -15,9 +15,7 @@ use App\Http\Controllers\ProfittController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[App\Http\Controllers\ProfilController::class,'acceuil']);
 
 Auth::routes();
 

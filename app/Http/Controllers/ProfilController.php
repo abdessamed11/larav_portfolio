@@ -20,6 +20,15 @@ class ProfilController extends Controller
       return view('profil.index',['profils'=>$profils,'skills'=>$skills]);
     }
 
+    public function acceuil()
+    {
+      $profils = Profil::all();
+      $skills = skills::all();
+      return view('index',['profils'=>$profils,'skills'=>$skills]);
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -69,9 +78,9 @@ class ProfilController extends Controller
      * @param  \App\Models\Profil  $profil
      * @return \Illuminate\Http\Response
      */
-    public function edit(Profil $profil)
+    public function edit()
     {
-        //
+
     }
 
     /**

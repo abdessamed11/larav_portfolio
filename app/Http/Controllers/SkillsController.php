@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\skills;
+use App\Models\Profil;
 use Illuminate\Http\Request;
 
 class SkillsController extends Controller
@@ -15,7 +16,8 @@ class SkillsController extends Controller
     public function index()
     {
       $skills = skills::all();
-      return view('skills.index',['skills'=>$skills]);
+      $profils = Profil::all();
+      return view('skills.index',['skills'=>$skills,'profils'=>$profils]);
     }
 
     /**
@@ -25,6 +27,7 @@ class SkillsController extends Controller
      */
     public function create()
     {
+
         return view('skills.create');
     }
 
@@ -61,9 +64,10 @@ class SkillsController extends Controller
      * @param  \App\Models\skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function edit(skills $skills)
+    public function edit($id)
     {
-        //
+        $skills = skills::find($id);
+        return view('skills.edit',['skills' => $skills]);
     }
 
     /**
@@ -73,9 +77,15 @@ class SkillsController extends Controller
      * @param  \App\Models\skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, skills $skills)
+    public function update(Request $request, $id)
     {
-        //
+      $skills = skills::find($id);
+
+      $skills->competence = $request['competence'];
+      $skills->pourcentage = $request['pourcentage'];
+      $skills->save();
+
+      return redirect('/skills');
     }
 
     /**
@@ -84,8 +94,10 @@ class SkillsController extends Controller
      * @param  \App\Models\skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function destroy(skills $skills)
+    public function destroy($id)
     {
-        //
+      $skills = skills::find($id);
+      $skills->delete();
+      return redirect('skills');
     }
 }

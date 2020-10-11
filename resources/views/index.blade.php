@@ -3,7 +3,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      @foreach($profits as $profit)
+      @foreach($profils as $profit)
       <h1>{{$profit->nom}} {{$profit->prenom}}</h1>
 
       <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
@@ -202,7 +202,7 @@
     </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+    <section id="portfolio" class="portfolio section-bg ">
       <div class="container">
 
         <div class="section-title">
