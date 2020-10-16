@@ -44,23 +44,28 @@
   <div class="row my-3">
 
     <div class="col-sm">
-      <span>{{$fact->clients}}</span> <strong>Happy clients</strong>
+      <span class="font-weight-bold display-4 d-block">{{$fact->clients}}</span> <strong>Happy clients</strong> lorem ipsum
       <p>
         lorem ipsum
       </p>
     </div>
     <div class="col-sm">
-      <span>{{$fact->projets}}</span> <strong>Projects</strong>
-      <p>lorem ipsum</p>
+      <span class="font-weight-bold display-4 d-block">{{$fact->projets}}</span> <strong>Projets</strong> lorem ipsum
+      <p>
+        lorem ipsum
+      </p>
     </div>
     <div class="col-sm">
-      {{$fact->supports}}<strong>Supports</strong>
-      <p>lorem ipsum</p>
+      <span class="font-weight-bold display-4 d-block">{{$fact->supports}}</span> <strong>Supports</strong> lorem ipsum
+      <p>
+        lorem ipsum
+      </p>
     </div>
     <div class="col-sm">
-      {{$fact->works}}
-      <strong>Works</strong>
-      <p>lorem ipsum</p>
+      <span class="font-weight-bold display-4 d-block">{{$fact->works}}</span> <strong>Works</strong> lorem ipsum
+      <p>
+        lorem ipsum
+      </p>
     </div>
 
   </div>
