@@ -37,14 +37,32 @@
 
 <body>
 
-  <div class="">
-    <h2>hello</h2>
+
+  <div class="container">
+    <h2>Facts</h2>
     @foreach($facts as $fact)
-      <ul>
-        <li>{{$fact->clients}}</li>
-        <li>{{$fact->projets}}</li>
-        <li>{{$fact->supports}}</li>
-        <li>{{$fact->works}}</li>
-      </ul>
-    @endforeach
+  <div class="row my-3">
+
+    <div class="col-sm">
+      <span>{{$fact->clients}}</span> <strong>Happy clients</strong>
+      <p>
+        lorem ipsum
+      </p>
+    </div>
+    <div class="col-sm">
+      <span>{{$fact->projets}}</span> <strong>Projects</strong>
+      <p>lorem ipsum</p>
+    </div>
+    <div class="col-sm">
+      {{$fact->supports}}<strong>Supports</strong>
+      <p>lorem ipsum</p>
+    </div>
+    <div class="col-sm">
+      {{$fact->works}}
+      <strong>Works</strong>
+      <p>lorem ipsum</p>
+    </div>
+
   </div>
+  @endforeach
+</div>
