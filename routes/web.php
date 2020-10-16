@@ -27,3 +27,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('/skills', SkillsController::class);
 Route::resource('/profil', ProfilController::class);
+Route::resource('/facts', FactsController::class);
